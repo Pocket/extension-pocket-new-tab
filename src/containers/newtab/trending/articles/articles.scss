@@ -1,0 +1,247 @@
+@import '../../../../common/_styles/colors';
+@import '../../../../common/_styles/components';
+
+.list {
+    display: inline-flex;
+    flex-wrap: wrap;
+    font-family: $fontstack-default;
+    justify-content: space-between;
+    list-style-type: none;
+    margin: 0;
+    padding: 0 0 25px;
+    text-align: left;
+    width: 100%;
+}
+
+.article {
+    background-color: $white;
+    border-radius: 3px;
+    box-shadow: $shadow;
+    display: block;
+    overflow: hidden;
+    position: relative;
+    transition: box-shadow 150ms, transform 150ms;
+    width: 225px;
+
+    .darkMode & {
+        background-color: $pitch;
+    }
+
+    @include narrow {
+        margin-bottom: 10px;
+        width: 100%;
+
+        &:nth-child(n+2) {
+            display: none;
+        }
+    }
+
+    &.active {
+        @include hoverDown;
+    }
+}
+
+.tileLink {
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+
+.copy {
+    padding: 10px 10px 0;
+}
+
+.title {
+    box-sizing: border-box;
+    color: $black;
+    display: block;
+    font-family: $fontstack-default;
+    font-size: 16px;
+    font-weight: 600;
+    height: 5em;
+    line-height: 1.25em;
+    margin: 0 0 15px;
+    overflow: hidden;
+    padding: 0 5px;
+    text-align: left;
+
+    .darkMode & {
+        color: $gray;
+    }
+
+    @include narrow {
+        height: auto;
+    }
+}
+
+.logo {
+    display: inline-block;
+    float: right;
+}
+
+.link {
+    cursor: pointer;
+    display: block;
+    overflow: hidden;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    transform: perspective(1px);
+    transition: all 150ms;
+
+    &:link,
+    &:visited,
+    &:active {
+        color: $pitch;
+
+        .darkMode & {
+            color: $overcast;
+        }
+    }
+
+    .activeTitle & {
+        color: $teal;
+    }
+
+    .darkMode.activeTitle & {
+        color: $teal;
+    }
+}
+
+.image {
+    background-color: $smoke;
+    border-bottom: 1px solid $snow;
+    box-sizing: border-box;
+    height: 144px;
+    width: 100%;
+
+    .darkMode & {
+        background-color: $pitch;
+        border-color: $tar;
+    }
+}
+
+.source {
+    color: $overcast;
+    cursor: pointer;
+    display: block;
+    font-family: $fontstack-default;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    overflow: hidden;
+    padding: 3px 5px 9px;
+    position: relative;
+    text-decoration: none;
+    text-overflow: ellipsis;
+
+    &:hover {
+        color: $teal;
+    }
+
+    .darkMode & {
+        color: $darksmoke;
+
+        &:hover{
+            color: $teal;
+        }
+    }
+}
+
+.actions {
+    border-top: 1px solid $snow;
+
+    .darkMode & {
+        border-color: $tar;
+    }
+}
+
+.save {
+    @include pocketButton;
+
+    background-color: transparent;
+    border: 0;
+    color: $overcast;
+    cursor: pointer;
+    display: block;
+    font-size: 13px;
+    font-weight: 100;
+    line-height: 16px;
+    padding: 10px 5px;
+    position: relative;
+    text-decoration: none;
+    width: 100%;
+
+    &.saved,
+    &:hover {
+        border: 0;
+        color: $hot-coral;
+    }
+}
+
+.trendingStories {
+    display: inline-block;
+    width: 100%;
+}
+
+.sectionTitle {
+    color: $darksmoke;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
+    margin: 0 0 15px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+a.titleLink {
+    color: $darksmoke;
+    text-decoration: none;
+
+    &:hover {
+        color: $teal;
+    }
+}
+
+.sectionButton {
+    @include pocketButton;
+
+    float: right;
+    font-size: 12px;
+}
+
+.error {
+    align-items: center;
+    border-top: 1px $overcast;
+    color: $darksmoke;
+    display: flex;
+    justify-content: center;
+    padding: 60px 0;
+}
+
+.errorBlock {
+    font-family: $fontstack-default;
+    font-weight: 100;
+    letter-spacing: 0.1em;
+    text-align: left;
+    width: 60%;
+}
+
+.errorTitle {
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.errorCopy {
+    font-size: 16px;
+}
+
+.retry {
+    @include pocketButton;
+
+    color: $teal;
+
+    &:hover{
+        text-decoration: underline;
+    }
+}

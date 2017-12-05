@@ -1,0 +1,116 @@
+@import '../../../common/_styles/colors';
+@import '../../../common/_styles/components';
+
+.section {
+    display: block;
+    padding: 0 0 40px;
+    text-align: left;
+}
+
+.sectionTitle {
+    color: $darksmoke;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
+    margin: 0 0 15px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.topsite {
+    display: inline-block;
+
+    @include narrow {
+        &:nth-child(n+5) {
+            display: none;
+        }
+    }
+
+    a {
+        align-items: center;
+        border-radius: 3px;
+        box-shadow: $shadow;
+        color: $silver;
+        cursor: pointer;
+        display: flex;
+        font-size: 14px;
+        font-weight: 200;
+        height: 64px;
+        overflow: hidden;
+        text-decoration: none;
+        transition: transform 150ms, box-shadow 150ms;
+        width: 64px;
+
+        &:hover {
+            @include hoverDown;
+        }
+
+        .darkMode &{
+            background-color: $pitch;
+            color: $tar;
+
+            &:hover{
+                background-color: $night;
+            }
+        }
+    }
+
+    &.verbose {
+        border: 1px solid transparent;
+        border-radius: 4px;
+        padding: 5px;
+        width: 30%;
+
+        &:nth-child(n+7) {
+            display: none;
+        }
+
+        &:hover {
+            background-color: $powder;
+            border: 1px solid $smoke;
+            color: $pitch;
+        }
+
+        &.darkMode:hover {
+            background-color: $tar;
+            border: 1px solid $coal;
+            color: $silver;
+        }
+
+        a {
+            box-shadow: none;
+            height: auto;
+            width: 100%;
+
+            &:hover {
+                transform: translateY(0);
+            }
+
+
+        }
+    }
+}
+
+.description {
+    color: $pitch;
+    display: inline-block;
+    margin-left: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 70%;
+
+    .darkMode & {
+        color: $silver;
+    }
+}
+

@@ -1,0 +1,181 @@
+@import '../../../../../common/_styles/colors';
+@import '../../../../../common/_styles/components';
+
+:global { @import 'keyframes.scss'; }
+
+.skeleton {
+    background-color: $powder;
+    background-image:
+        linear-gradient(
+            45deg,
+            transparent 1%,
+            transparent 53%,
+            $white 54%,
+            $white 56%,
+            transparent 57%,
+            transparent 100%
+        );
+    background-position: 1000px;
+    background-repeat: no-repeat;
+    background-size: 610px;
+    border: 1px solid $smoke;
+    border-radius: 3px;
+    box-shadow: $shadow-light;
+    color: $white;
+    display: block;
+    opacity: 0;
+    overflow: hidden;
+    position: relative;
+    width: 220px;
+
+    &:nth-child(1) {
+        animation: shine 8s infinite, fadeInOut 450ms;
+        animation-fill-mode: forwards;
+    }
+
+    &:nth-child(2) {
+        animation: shine 8s 100ms infinite, fadeInOut 450ms;
+        animation-fill-mode: forwards;
+    }
+
+    &:nth-child(3) {
+        animation: shine 8s 200ms infinite, fadeInOut 450ms;
+        animation-fill-mode: forwards;
+    }
+
+    &.darkMode {
+        background-color: $pitch;
+        background-image:
+            linear-gradient(
+                45deg,
+                transparent 1%,
+                transparent 52%,
+                $tar 54%,
+                $tar 56%,
+                transparent 58%,
+                transparent 100%
+            );
+        border: 1px solid $tar;
+    }
+
+    @include narrow {
+        margin-bottom: 10px;
+        width: 100%;
+
+        &:nth-child(n+2) {
+            display: none;
+        }
+    }
+}
+
+.image {
+    align-items: center;
+    background-color: rgba($alabaster, 0.5);
+    border-bottom: 1px solid $smoke;
+    color: $smoke;
+    display: flex;
+    height: 130px;
+    justify-content: center;
+    width: 100%;
+
+    .darkMode & {
+        background-color: rgba($tar, 0.5);;
+        border: 1px solid $tar;
+        color: $tar;
+    }
+}
+
+.copy {
+    height: 5em;
+    padding: 20px 20px 60px;
+}
+
+.copyBlocks {
+    background-color: $alabaster;
+    border-radius: 4px;
+    height: 1em;
+    position: relative;
+
+    &::after,
+    &::before {
+        background-color: $alabaster;
+        border-radius: 4px;
+        content: '';
+        display: block;
+        height: 1em;
+        left: 0;
+        position: absolute;
+        top: 2em;
+        width: 100%;
+    }
+
+    &::before {
+        top: 4em;
+        width: 80%;
+    }
+
+    .darkMode & {
+        background-color: $tar;
+        &::after,
+        &::before {
+            background-color: $tar;
+        }
+    }
+}
+
+.action {
+    display: block;
+    padding: 10px 20px;
+    width: 100%;
+}
+
+.actionBlock {
+    background-color: $alabaster;
+    border-radius: 4px;
+    display: block;
+    height: 1em;
+    position: relative;
+    width: 1.5em;
+
+    &::after {
+        background-color: $alabaster;
+        border-radius: 4px;
+        content: '';
+        height: 1em;
+        left: 1.5rem;
+        position: absolute;
+        top: 0;
+        width: 100px;
+    }
+
+    .darkMode & {
+        background-color: $tar;
+        &::after {
+            background-color: $tar;
+        }
+    }
+}
+
+.loader {
+    animation: load6 1.7s infinite ease, round 1.7s infinite ease;
+    border-radius: 50%;
+    color: $alabaster;
+    font-size: 48px;
+    height: 1em;
+    margin: 72px auto;
+    overflow: hidden;
+    position: relative;
+    text-indent: -9999em;
+    transform: translateZ(0);
+    width: 1em;
+
+    .skeleton:nth-child(1) &,
+    .skeleton:nth-child(3) & {
+        display: none;
+    }
+
+    .skeleton:nth-child(2) & {
+        animation-delay: 2s;
+    }
+
+}

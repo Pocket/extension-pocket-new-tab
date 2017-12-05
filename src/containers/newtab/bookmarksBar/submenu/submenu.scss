@@ -1,0 +1,130 @@
+@import '../../../../common/_styles/colors';
+@import '../../../../common/_styles/variables';
+@import '../../../../common/_styles/components';
+
+.submenu {
+    background: $white;
+    box-shadow: $shadow-high;
+    left: 10px;
+    list-style-type: none;
+    max-width: 300px;
+    min-width: 100px;
+    padding: 4px 6px;
+    position: absolute;
+    text-align: left;
+    top: 34px;
+    z-index: $bookmarks;
+
+    &.darkMode {
+        background-color: $tar;
+        box-shadow: $shadow;
+        color: $overcast;
+    }
+}
+
+.list {
+    font-size: 13px;
+    letter-spacing: 0.05em;
+    line-height: 1.35em;
+    list-style-type: none;
+    margin: 0;
+    max-height: calc(100vh - 100px);
+    overflow-y: scroll;
+    padding: 0;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.item {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.overflowTop,
+.overflowBottom {
+    background-color: $white;
+    border-color: $gray;
+    border-style: solid;
+    border-width: 1px 0 0;
+    box-sizing: border-box;
+    color: $darksmoke;
+    cursor: pointer;
+    display: block;
+    letter-spacing: 0.08em;
+    line-height: 1em;
+    padding: 3px 8px;
+    text-align: center;
+    width: 100%;
+    z-index: 20;
+
+    .darkMode & {
+        background-color: $tar;
+        border-color: $darksmoke;
+        color: $overcast;
+    }
+}
+
+.overflowTop {
+    border-width: 0 0 1px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+
+.overflowBottom {
+    // bottom: 0;
+    // box-shadow: 0 -4px 8px rgba(0,0,0,0.1);
+    // left: 0;
+    // position: absolute;
+}
+
+.label {
+    border-bottom: 1px solid $gray;
+    box-sizing: border-box;
+    color: $darksmoke;
+    display: block;
+    letter-spacing: 0.08em;
+    margin-bottom: 10px;
+    padding: 4px 8px 4px 35px;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    z-index: 10;
+
+    .darkMode & {
+        border-color: $darksmoke;
+        color: $overcast;
+    }
+}
+
+.back {
+    @include pocketButton;
+
+    border-radius: 4px;
+    color: $silver;
+    left: 0;
+    padding: 2px 8px;
+    position: absolute;
+    top: 0;
+
+    &:hover {
+        background-color: $snow;
+        color: $black;
+    }
+
+    .darkMode & {
+        background-color: $tar;
+        border-color: $darksmoke;
+        color: $overcast;
+
+        &:hover {
+            background-color: $darksmoke;
+            color: $white;
+        }
+    }
+}

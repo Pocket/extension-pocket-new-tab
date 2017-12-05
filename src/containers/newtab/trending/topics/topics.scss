@@ -1,0 +1,87 @@
+@import '../../../../common/_styles/colors';
+@import '../../../../common/_styles/components';
+
+.section {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    width: 100%;
+}
+
+.topics {
+    width: 82%;
+}
+
+.title {
+    color: $darksmoke;
+    display: block;
+    float: left;
+    font-size: 14px;
+    margin-right: 15px;
+    text-transform: uppercase;
+}
+
+a.titleLink {
+    color: $darksmoke;
+    text-decoration: none;
+
+    &:hover {
+        color: $teal;
+    }
+}
+
+.list {
+    display: block;
+    float: left;
+    list-style-type: none;
+    margin: 0;
+    max-width: 65%;
+    padding: 0;
+}
+
+.topic {
+    display: inline-block;
+
+    &:not(:first-child)::before {
+        color: $pitch;
+        content: '•';
+        padding: 0 8px;
+        vertical-align: top;
+    }
+
+    @include narrow {
+        display: block;
+        padding-top: 5px;
+
+        &:not(:first-child)::before {
+            display: none;
+        }
+    }
+
+    a {
+        color: $teal;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 200;
+        text-decoration: none;
+
+        &:hover {
+            color: $tealHover;
+        }
+    }
+}
+
+.viewMore {
+    text-align: right;
+    width: 120px;
+}
+
+.viewMoreLink {
+    color: $teal;
+    font-size: 14px;
+    text-decoration: none;
+
+    &:hover {
+        color: $tealHover;
+    }
+}

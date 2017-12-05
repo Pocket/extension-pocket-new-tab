@@ -1,0 +1,48 @@
+@import '../../../common/_styles/colors';
+@import '../../../common/_styles/components';
+
+.search {
+    display: inline-block;
+    padding-bottom: 40px;
+    width: 100%;
+
+    input {
+        border: 1px solid $silver;
+        box-sizing: border-box;
+        color: $pitch;
+        font-family: $fontstack-default;
+        font-size: 16px;
+        height: 38px;
+        line-height: 38px;
+        padding: 0 10px;
+        width: 100%;
+
+        &::placeholder {
+            color: $silver;
+            font-style: italic;
+        }
+
+        &:focus {
+            border: 1px solid $overcast;
+            outline: 0;
+        }
+
+        &.darkMode {
+            background-color: $pitch;
+            border: 1px solid $tar;
+            color: $silver;
+
+            &::placeholder {
+                color: $overcast;
+            }
+
+            &:focus {
+                border-color: $darksmoke;
+
+                &::placeholder {
+                    color: $silver;
+                }
+            }
+        }
+    }
+}

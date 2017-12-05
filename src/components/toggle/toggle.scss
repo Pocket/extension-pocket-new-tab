@@ -1,0 +1,42 @@
+@import '../../common/_styles/colors';
+@import '../../common/_styles/variables';
+
+.toggle {
+    all: unset;
+    background: $silver;
+    border: 1px solid $overcast;
+    border-radius: 2em;
+    cursor: pointer;
+    display: block;
+    height: 10px;
+    outline: 0;
+    padding: 2px;
+    transition: all 0.4s ease;
+    vertical-align: middle;
+    width: 20px;
+
+    &::after {
+        background: $white;
+        border-radius: 50%;
+        content: "";
+        display: block;
+        height: 100%;
+        left: 0;
+        position: relative;
+        transition: all 0.2s ease;
+        width: 50%;
+    }
+
+    &.darkMode,
+    &.darkModeSet {
+        border-color: $pitch;
+    }
+
+    &.active {
+        background-color: $teal;
+
+        &::after {
+            left: 50%;
+        }
+    }
+}

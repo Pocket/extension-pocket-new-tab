@@ -1,0 +1,34 @@
+@import '../../common/_styles/colors';
+@import '../../common/_styles/variables';
+@import '../../common/_styles/components';
+
+.container {
+    display: inline-block;
+    font-family: $fontstack-default;
+    transition: filter 200ms ease-in;
+    width: 700px;
+
+    @include narrow {
+        width: 300px;
+    }
+
+    &.obscure {
+        filter: blur(5px) saturate(20%);
+        pointer-events: none;
+        transition: filter 1500ms ease-out;
+    }
+}
+
+.header {
+    display: block;
+    margin: 70px 0 0;
+    padding: 0 0 40px;
+
+    & > div:last-child {
+        border-bottom: 1px solid $snow;
+
+        .darkMode & {
+            border-color: $tar;
+        }
+    }
+}

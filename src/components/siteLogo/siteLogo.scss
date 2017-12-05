@@ -1,0 +1,12 @@
+.image {
+    width: 100%;
+
+    &.verbose {
+        height: 32px;
+        width: 32px;
+    }
+
+    &.darkMode {
+        filter: saturate(50%);
+    }
+}

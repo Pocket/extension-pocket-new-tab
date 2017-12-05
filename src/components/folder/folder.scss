@@ -1,0 +1,54 @@
+@import '../../common/_styles/colors';
+@import '../../common/_styles/variables';
+@import '../../common/_styles/components';
+
+
+.folder {
+    @include pocketButton;
+
+    background-color: $white;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: $darksmoke;
+    cursor: pointer;
+    display: block;
+    overflow: hidden;
+    padding: 4px 6px;
+    position: relative;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    transition: opacity 450ms;
+    white-space: nowrap;
+    width: 100%;
+    z-index: 10;
+
+    &:hover {
+        background-color: $smoke;
+        color: $black;
+    }
+
+    &.hide {
+        opacity: 0;
+    }
+
+    &.darkMode {
+        background-color: $tar;
+        border-bottom: transparent;
+        color: $overcast;
+
+        &:hover {
+            background-color: $coal;
+            color: $smoke;
+        }
+    }
+}
+
+.icon {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.copy {
+    display: inline;
+    padding-left: 5px;
+}

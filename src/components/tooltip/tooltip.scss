@@ -1,0 +1,91 @@
+@import '../../common/_styles/colors';
+@import '../../common/_styles/variables';
+
+.tooltip {
+    background-color: $white;
+    border: 1px solid $gray;
+    border-radius: 6px;
+    box-shadow: $shadow-light;
+    font-family: $fontstack-default;
+    font-size: 14px;
+    font-weight: 300;
+    max-width: 300px;
+    opacity: 0;
+    overflow-wrap: break-word;
+    padding: 10px 15px;
+    pointer-events: none;
+    position: absolute;
+    transform: translateX(-50%);
+    word-wrap: break-word;
+    z-index: $tooltip;
+
+
+    &.active {
+        opacity: 1;
+        pointer-events: auto;
+        transition: opacity 250ms 50ms;
+    }
+
+
+    &::after {
+        border: 11px solid $gray;
+        border-color: transparent transparent $gray transparent;
+        content: '';
+        height: 0;
+        left: 50%;
+        position: absolute;
+        top: -23px;
+        transform: translateX(-50%);
+        width: 0;
+        z-index: 2;
+    }
+
+    &::before {
+        border: 10px solid $white;
+        border-color: transparent transparent $white transparent;
+        content: '';
+        height: 0;
+        left: 50%;
+        position: absolute;
+        top: -20px;
+        transform: translateX(-50%);
+        width: 0;
+        z-index: 3;
+    }
+
+    &.left {
+        transform: translateX(0);
+
+        &::after,
+        &::before {
+            left: 34px;
+        }
+    }
+
+    &.right {
+        transform: translateX(0);
+
+        &::after,
+        &::before {
+            left: auto;
+            right: 34px;
+            transform: translateX(50%);
+        }
+    }
+
+    &.darkMode {
+        background-color: $pitch;
+        border: 1px solid $tar;
+        color: $silver;
+
+        &::after {
+            border: 11px solid $tar;
+            border-color: transparent transparent $tar transparent;
+        }
+
+        &::before {
+            border: 10px solid $pitch;
+            border-color: transparent transparent $pitch transparent;
+        }
+    }
+}

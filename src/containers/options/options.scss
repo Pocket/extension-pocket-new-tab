@@ -1,0 +1,150 @@
+@import '../_common/styles/colors';
+@import '../_common/styles/variables';
+@import '../_common/styles/components';
+
+.container {
+    box-sizing: border-box;
+    display: inline-block;
+    font-family: $fontstack-default;
+    padding: 0 40px;
+    width: 700px;
+
+    @include narrow {
+        width: 100%;
+    }
+}
+
+.title {
+    color: $pitch;
+    font-size: 28px;
+    font-weight: 300;
+    margin: 70px 0 0;
+    padding: 0 0 20px;
+    text-align: left;
+
+    .darkMode & {
+        color: $gray;
+    }
+}
+
+.copy {
+    color: $pitch;
+    font-size: 14px;
+    padding: 0 0 20px;
+    text-align: left;
+
+    .darkMode & {
+        color: $gray;
+    }
+}
+
+.logo {
+    display: inline-block;
+    width: 90px;
+}
+
+.copyright {
+    color: $darksmoke;
+    display: block;
+    font-size: 14px;
+    font-weight: 300;
+    margin-top: 40px;
+    text-align: left;
+
+    .darkMode & {
+        color: $smoke;
+    }
+}
+
+.section {
+    align-items: center;
+    border-top: 1px solid $snow;
+    display: flex;
+    font-size: 14px;
+    justify-content: flex-start;
+    padding: 20px 0;
+    text-align: left;
+
+    .darkMode & {
+        border-color: $tar;
+    }
+
+    @include narrow {
+        flex-direction: column;
+    }
+}
+
+.sectionAction {
+    display: inline-block;
+    min-width: 60px;
+}
+
+.sectionContent {
+    display: inline-block;
+}
+
+.sectionTitle {
+    color: $darksmoke;
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    margin-right: 35px;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    white-space: nowrap;
+
+    .darkMode & {
+        color: $gray;
+    }
+
+    @include narrow {
+        margin-bottom: 20px;
+        width: 100%;
+    }
+}
+
+.sectionCopy {
+    color: $darksmoke;
+    display: block;
+
+    .darkMode & {
+        color: $gray;
+    }
+
+    @include narrow {
+        width: 100%;
+    }
+}
+
+.toggle {
+    @include pocketToggle;
+
+    @include narrow {
+        float: right;
+    }
+}
+
+.footnote {
+    border-top: 1px solid $snow;
+    color: $pitch;
+    font-size: 16px;
+    padding: 20px 0;
+    text-align: left;
+
+    .darkMode & {
+        border-color: $tar;
+        color: $gray;
+    }
+}
+
+.helpLink {
+    color: $teal;
+    display: block;
+    padding: 10px 0;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}

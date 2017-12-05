@@ -1,0 +1,109 @@
+@import '../../../../common/_styles/colors';
+@import '../../../../common/_styles/variables';
+@import '../../../../common/_styles/components';
+
+.list {
+    background-color: $white;
+    border-bottom: 1px solid $smoke;
+    box-sizing: border-box;
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0 10px 0 0;
+    position: relative;
+    text-align: left;
+    width: 100%;
+    z-index: 11;
+
+    &.darkMode {
+        background-color: $tar;
+        border-bottom: 1px solid $coal;
+    }
+}
+
+.bookmark,
+.bookmarkOverflow,
+.bookmarkManager {
+    display: block;
+    font-size: 12px;
+    font-weight: 100;
+    letter-spacing: 0.05em;
+    line-height: 16px;
+    max-width: 150px;
+    padding: 4px 0;
+    position: relative;
+
+    &.hidden {
+        pointer-events: none;
+        visibility: hidden;
+    }
+}
+
+.bookmarkOverflow {
+    border-left: 1px solid $smoke;
+    margin-left: 5px;
+
+    .darkMode & {
+        border-left: 1px solid $coal;
+    }
+}
+
+.bookmarkManager {
+    border-right: 1px solid $smoke;
+    margin-right: 5px;
+
+    .darkMode & {
+        border-right: 1px solid $coal;
+    }
+}
+
+.buttonLink,
+.bookmarkManagerLink {
+    @include pocketButton;
+
+    height: 16px;
+    margin-left: 4px;
+}
+
+.link,
+.buttonLink,
+.bookmarkManagerLink {
+    background-color: $white;
+    border-radius: 4px;
+    color: $darksmoke;
+    cursor: pointer;
+    display: block;
+    max-width: 145px;
+    overflow: hidden;
+    padding: 2px 6px;
+    position: relative;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    z-index: 10;
+
+    &:hover {
+        background-color: $smoke;
+        color: $black;
+    }
+
+    .darkMode & {
+        background-color: $tar;
+        border-bottom: transparent;
+        color: $overcast;
+
+        &:hover {
+            background-color: $coal;
+            color: $smoke;
+        }
+    }
+}
+
+.buttonLink {
+    padding: 4px 6px;
+}
+
+.bookmarkManagerLink {
+    margin-right: 3px;
+    padding: 4px;
+}

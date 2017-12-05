@@ -1,0 +1,141 @@
+@import '../../../../common/_styles/colors';
+@import '../../../../common/_styles/components';
+
+.darkMode {
+    color: $gray;
+}
+
+.trigger {
+    @include pocketButton;
+
+    color: $overcast;
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    z-index: $settings;
+
+    &:hover {
+        color: $teal;
+    }
+
+    .bookmarksActive & {
+        top: 50px;
+    }
+}
+
+.options {
+    position: absolute;
+    right: 20px;
+    top: 45px;
+    width: 300px;
+    z-index: $settings;
+
+    .bookmarksActive & {
+        top: 75px;
+    }
+}
+
+.panel {
+    @include pocketPanel;
+
+    background-color: $white;
+    box-shadow: $shadow-high;
+    color: $pitch;
+    display: none;
+    font-family: $fontstack-default;
+    font-size: 14px;
+    padding: 15px 20px 10px;
+    text-align: left;
+
+    .darkMode & {
+        background-color: $tar;
+        border-color: transparent;
+        color: $gray;
+    }
+
+    &.active {
+        display: block;
+    }
+}
+
+.header {
+    color: $pitch;
+    font-family: $fontstack-default;
+    font-size: 1.2em;
+    font-weight: 200;
+    margin-bottom: 20px;
+
+    .darkMode & {
+        color: $gray;
+    }
+}
+
+.headerCopy {
+    font-family: $fontstack-default;
+    font-size: 0.7em;
+    font-weight: 200;
+    padding: 0.5em 0 0;
+}
+
+.headerLink {
+    color: $teal;
+    padding-left: 10px;
+    text-decoration: none;
+
+    &:hover {
+        color: $tealHover;
+    }
+
+    .darkMode & {
+        border-color: $pitch;
+    }
+}
+
+.section,
+.subSection {
+    border-top: 1px solid $smoke;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    position: relative;
+
+    .darkMode & {
+        border-color: $pitch;
+    }
+}
+
+.title,
+.subTitle {
+    font-size: 1em;
+    font-weight: 200;
+    letter-spacing: 0.025em;
+}
+
+.copy {
+    font-size: 0.875em;
+    font-weight: 200;
+    line-height: 1.4em;
+    padding: 10px 0 20px;
+}
+
+.choice {
+    font-weight: 300;
+    line-height: 20px;
+}
+
+.feedback {
+    border-top: 1px solid $smoke;
+    color: $teal;
+    display: block;
+    padding: 15px 0 5px;
+    text-align: left;
+    text-decoration: none;
+
+    &:hover {
+        color: $tealHover;
+    }
+
+    .darkMode & {
+        border-color: $pitch;
+    }
+}
