@@ -5,7 +5,7 @@
   "version": "1.2.3",
   "private": true,
   "devDependencies": {
-    "pocket-build-tools": "git+ssh://git@github.com/Pocket/front-end-build-tools-audit.git"
+    "pocket-build-tools": "git+https://git@github.com/Pocket/front-end-build-tools.git"
   },
   "dependencies": {
     "blueimp-md5": "^2.10.0",
