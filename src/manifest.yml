@@ -33,6 +33,7 @@ icons:
   '48': images/newtab-icon-48.png
   '128': images/newtab-icon-128.png
 manifest_version: 2
+externally_connectable: {}
 web_accessible_resources:
 - fonts/ProximaNova-Reg-webfont.eot
 - fonts/ProximaNova-Reg-webfont.woff
