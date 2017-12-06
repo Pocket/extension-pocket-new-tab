@@ -79,8 +79,8 @@
     }
   },
   "scripts": {
-    "start": "build-pocket-new-tab start",
-    "build": "build-pocket-new-tab build",
-    "test": "build-pocket-new-tab test --env=jsdom"
+    "start": "build-pocket pocket-new-tab start",
+    "build": "build-pocket pocket-new-tab build",
+    "test": "build-pocket pocket-new-tab test --env=jsdom"
   }
 }
