@@ -6,7 +6,7 @@
 
 Pocket New Tab is a browser extension that serves as a replacement to the default new tab. It includes much of the same functionality that’s available with the default new tab, while adding Trending Stories and Popular Topics from Pocket.
 
-Features include: 
+Features include:
 * Trending Stories - the best stories on the web curated by the Pocket community
 * Popular Topics - links to popular topics in Pocket Explore
 * Dark Theme - Invert the colors of your new tab with light text on a dark background.
@@ -14,9 +14,9 @@ Features include:
 * Search Bar - Perform a web search or navigate to a URL directly.
 * Most Visited Sites - Quick links to your most frequently visited sites in
 
-The Pocket New Tab Extension is currently compatible with Chrome, but future iterations will be compatible with other Webkit browsers. 
+The Pocket New Tab Extension is currently compatible with Chrome, but future iterations will be compatible with other Webkit browsers.
 
-## About this Repository 
+## About this Repository
 
 This is the skeleton structure for the Pocket New Tab extension codebase.
 
@@ -44,7 +44,7 @@ As functionality is added the readme should be updated with the module added. Te
 [React](https://facebook.github.io/react/) is a view library developed by Facebook to create declarative, component based UI.  It will automatically update the UI based on the state of the application using a virtual dom.
 
 #### Redux
-[Redux](http://redux.js.org/) is a library used to create a predictable state container.  It uses
+[Redux](http://redux.js.org/) is a library used to create a predictable state container.
 
 #### React-Chrome-Redux
 [React Chrome Redux](https://github.com/tshaddix/react-chrome-redux) allows us to build react/redux seamlessly with the background messaging convention in extensions.  The background page holds the Redux store, while Popovers and Content-Scripts act as UI Components, passing actions and state updates between themselves and the background store.
