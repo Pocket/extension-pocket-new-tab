@@ -12,7 +12,7 @@ export default class TrendingTopics extends Component {
                 <div className={style.topics}>
                     <div className={style.title}>
                         <a className={style.titleLink}
-                            href="https://getpocket.com/explore?src=chrome_new_tab">
+                            href="http://jonathan.dev.readitlater.com/explore?src=chrome_new_tab">
                             Popular Topics:
                         </a>
                     </div>
@@ -29,7 +29,7 @@ export default class TrendingTopics extends Component {
                 </div>
                 <div className={style.viewMore}>
                     <a className={style.viewMoreLink}
-                        href="https://getpocket.com/explore/trending?src=chrome_new_tab">
+                        href="http://jonathan.dev.readitlater.com/explore/trending?src=chrome_new_tab">
                         More Stories {ArrowRight({
                             width: '6px',
                             height: '6px',

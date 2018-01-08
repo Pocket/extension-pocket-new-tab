@@ -11,8 +11,8 @@ export function isNewTab(tab, url){
 
 export function getBaseUrl(){
     const baseURLSetting = getSetting('base_URL')
-    if(!baseURLSetting) setSettings({'base_URL':'https://getpocket.com/'})
-    return baseURLSetting || 'https://getpocket.com/'
+    if(!baseURLSetting) setSettings({'base_URL':'http://jonathan.dev.readitlater.com'})
+    return baseURLSetting || 'http://jonathan.dev.readitlater.com'
 }
 
 export function getAPIVersion(){
@@ -26,7 +26,7 @@ export function getAPIUrl(){
 }
 
 export function getSlug(url){
-    const match = url.match(/^(?:https:\/\/getpocket.com\/explore\/)(.+[^/])/i)
+    const match = url.match(/^(?:http:\/\/jonathan.dev.readitlater.com\/explore\/)(.+[^/])/i)
     return match[1]
 }
 
