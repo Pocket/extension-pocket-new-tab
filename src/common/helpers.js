@@ -11,8 +11,8 @@ export function isNewTab(tab, url){
 
 export function getBaseUrl(){
     const baseURLSetting = getSetting('base_URL')
-    if(!baseURLSetting) setSettings({'base_URL':'http://jonathan.dev.readitlater.com'})
-    return baseURLSetting || 'http://jonathan.dev.readitlater.com'
+    if(!baseURLSetting) setSettings({'base_URL':'http://jonathan.dev.readitlater.com/'})
+    return baseURLSetting || 'http://jonathan.dev.readitlater.com/'
 }
 
 export function getAPIVersion(){

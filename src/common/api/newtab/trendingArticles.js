@@ -9,7 +9,7 @@ export function getTrendingArticles( data, count ){
         path: 'getGlobalRecs/',
         data: {
             guid            : data.guid,
-            version         : 2,
+            version         : 3,
             locale_lang     : lang,
             count           : count
         }
