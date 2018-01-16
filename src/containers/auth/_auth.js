@@ -41,7 +41,7 @@ function showLoginPage(resolve, reject){
 }
 
 function closeLoginPage(){
-    Interface.queryTabs({ url:'*://getpocket.com/extension_newtab_login_success'},
+    Interface.queryTabs({ url:'*://jonathan.dev.readitlater.com/extension_newtab_login_success'},
         function(tabs){
             let tabIDs = tabs.map(tab => tab.id)
             Interface.closeTabs(tabIDs)
@@ -97,5 +97,3 @@ function loginUser( userCookies ){
             console.warn(errResponse)
         })
 }
-
-

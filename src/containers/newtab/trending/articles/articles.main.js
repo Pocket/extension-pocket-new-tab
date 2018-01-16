@@ -40,11 +40,11 @@ export default class TrendingArticles extends Component {
             <div className={style.trendingStories}>
                 <h4 className={style.sectionTitle}>
                     <a className={style.titleLink}
-                        href="https://getpocket.com/explore/trending?src=chrome_new_tab">
+                        href="http://jonathan.dev.readitlater.com/explore/trending?src=chrome_new_tab">
                         Trending Stories
                     </a>
                     <div className={style.logo}>
-                        <a href="https://www.getpocket.com"
+                        <a href="http://jonathan.dev.readitlater.com"
                             onClick={this.props.analyticsClickPocket}>
                             {PocketLogoType({width:'auto',height:'20px'})}
                         </a>

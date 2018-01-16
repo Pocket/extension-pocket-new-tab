@@ -6,7 +6,7 @@ import { getGuid } from '../../common/api'
 const initialState = {
     base_api_version            : 'v3/',
     base_loglevel               : 'LOUD',
-    base_URL                    : 'https://getpocket.com/',
+    base_URL                    : 'http://jonathan.dev.readitlater.com/',
     base_installed              : 1
 }
 

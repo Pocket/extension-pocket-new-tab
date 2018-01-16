@@ -115,7 +115,8 @@ function* validateCache(){
     const storedArticles    = yield select(getStoredArticles)
     const hasArticles       = Object.keys(storedArticles).length > 0
 
-    return (elapsedTime < CACHE_INTERVAL && hasArticles)
+    //return (elapsedTime < CACHE_INTERVAL && hasArticles)
+    return false;
 }
 
 function* invalidateArticles(){

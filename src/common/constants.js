@@ -6,4 +6,4 @@ export const TRENDING_ARTICLE_COUNT = 3
 export const TOP_SITES_COUNT        = 8
 export const LINK_HELP_PAGE         = 'https://help.getpocket.com/article/1141-using-the-pocket-new-tab-extension-in-chrome'
 export const LINK_SURVEY_PAGE       = 'https://www.surveymonkey.com/r/chromenewt'
-export const AUTH_URL               = 'https://getpocket.com/signup?src=extension&route=/extension_newtab_login_success'
+export const AUTH_URL               = 'http://jonathan.dev.readitlater.com/signup?src=extension&route=/extension_newtab_login_success'
