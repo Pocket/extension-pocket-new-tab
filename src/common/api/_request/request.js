@@ -1,6 +1,7 @@
 /* globals CONSUMER_KEY */
-
+import { Base64 } from 'js-base64'
 import { getAccessToken, getAPIUrl } from '../../helpers'
+import { getSetting } from '../../interface'
 
 /* Helper Functions
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -11,12 +12,20 @@ function request(options, skipAuth) {
 
     options.data.consumer_key = CONSUMER_KEY
 
+    const headers = new Headers({
+        'X-Accept': 'application/json',
+        'Content-Type': 'application/json'
+    })
+
+    const serverAuth = getSetting('base_server_auth')
+
+    if (serverAuth) {
+        headers.append('Authorization', 'Basic ' + Base64.encode(serverAuth))
+    }
+
     const fetchSettings = {
         method: 'POST',
-        headers: new Headers({
-            'X-Accept': 'application/json',
-            'Content-Type': 'application/json'
-        }),
+        headers: headers,
         body: JSON.stringify(options.data)
     }
 
