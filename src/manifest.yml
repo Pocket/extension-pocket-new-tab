@@ -6,18 +6,23 @@ description: Discover the best of the web on your new tab page. Curated by over 
 short_name: Discover the best of the web on your new tab page.
 background:
   scripts:
-  - js/background.bundle.js
+    - js/key.js
+    - js/background.bundle.js
+
 permissions:
 - contextMenus
 - cookies
 - storage
 - http://getpocket.com/*
 - https://getpocket.com/*
+
 optional_permissions:
 - topSites
 - bookmarks
+
 chrome_url_overrides:
   newtab: newtab.html
+
 content_scripts:
 - matches:
   - "*://getpocket.com/extension_newtab_login_success"
@@ -33,7 +38,8 @@ icons:
   '48': images/newtab-icon-48.png
   '128': images/newtab-icon-128.png
 manifest_version: 2
-externally_connectable: {}
+externally_connectable:
+  ids: []
 web_accessible_resources:
 - fonts/ProximaNova-Reg-webfont.eot
 - fonts/ProximaNova-Reg-webfont.woff
