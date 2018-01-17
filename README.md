@@ -63,7 +63,8 @@ As functionality is added the readme should be updated with the module added. Te
 Before you get started you will need to do the following:
 
 1. Register an API key from [https://getpocket.com/developer/](https://getpocket.com/developer/)
-2. Create a keys.json file with the folowing format:
+2. Create a keys.json file in the root directory of the project with the
+folowing format:
 
 ```json
 {
