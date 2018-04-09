@@ -77,9 +77,9 @@ export function getDefaultKeyboardShortCut(){
 }
 
 export function getBestImage(item){
-    return (item.images[Object.keys(item.images)[0]]) ?
-        item.images[Object.keys(item.images)[0]].src :
-        item.top_image_url
+    return item.top_image_url ? 
+        item.top_image_url :
+        item.images[Object.keys(item.images)[0]].src
 }
 
 export function getImageCacheUrl( url, resize, fallback ) {
