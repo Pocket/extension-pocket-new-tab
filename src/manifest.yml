@@ -1,9 +1,10 @@
 ---
 name: Pocket New Tab
-version: 1.2.3.0
+version: 1.2.6.0
 options_page: options.html
 description: Discover the best of the web on your new tab page. Curated by over 30 million people on Pocket.
 short_name: Discover the best of the web on your new tab page.
+default_locale: "en"
 background:
   scripts:
     - js/key.js
